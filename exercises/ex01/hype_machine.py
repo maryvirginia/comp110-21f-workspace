@@ -1,5 +1,8 @@
-# TODO: Write docstring here
+"""EX01 hype machine practicing concatenation."""
 
-# TODO: Initialize __author__ variable here
+__author__: str = "730224009"
 
-# TODO: Implement your program logic here
+name: str = input("What is your name? ")
+print("Good morning, " + name + ", you look beautiful today!")
+print(name + "-- you are going to kill it today!")
+print("Let's get it " + name)
