@@ -10,11 +10,11 @@ given_number: int = int(input("How many times do you want to repeat it? "))
 total_beat: str = (beat)
 counter: int = 0
 
-while counter < given_number:
-    if given_number > 0:
-        total_beat = (beat + " ") * (given_number - 1) + beat
-        print(total_beat)
-        counter = counter + given_number
-    else:
-        print("No beat...")
-        counter = counter + given_number
+while given_number > (counter + 1):
+    total_beat = total_beat + " " + beat
+    counter = counter + 1
+
+if given_number <= 0:
+    print("No beat...")
+else:
+    print(total_beat)
