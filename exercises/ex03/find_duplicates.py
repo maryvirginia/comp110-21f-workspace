@@ -8,7 +8,7 @@ counter2: int = 0
 length: int = len(given_word)
 length2: int = len(given_word)
 
-while counter + 1 < length:  # counting neighbors
+while counter + 1 < length:  # comparing neighbors
     if given_word[counter] != given_word[counter + 1]:
         counter = counter + 1
     else:
@@ -16,7 +16,7 @@ while counter + 1 < length:  # counting neighbors
         length2 = -1
         print("Found duplicate: True")
 
-while counter2 < length2:
+while counter2 < length2:  # comparing to each
     letter_counter: int = counter2 + 2
     while letter_counter < length2:
         if given_word[counter2] != given_word[letter_counter]:
