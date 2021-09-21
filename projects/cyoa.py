@@ -2,8 +2,10 @@
 
 __author__ = "730224009"
 
-## variable naming
+# variable naming
 player: str = ""
+points: int = 0
+choice: int = 0
 ISLAND: str = "\U0001F3DD"
 
 
@@ -27,7 +29,7 @@ def main() -> None:
             home_base()
             
         if choice == 2:  # 2 = search beaches
-            search_beaches()
+            points = search_beaches(points)
             
         if choice == 3:  # 3 = search jungle
             search_jungle()
@@ -53,21 +55,29 @@ def home_base() -> None:
     """Allows player's choice of actions."""
     global points
     global choice
-    print(f"You have {points} total adventure points.")
+    print(f"{player}, you have {points} total adventure points.")
     print("How do you want to proceed?")
     print("2: I want to search the beaches. \n3: I want to search the jungle. \n0: I want to leave Adventure Island.")
     choice = int(input("Enter the number of your action: "))
     points = add_points(points)
 
 
-def search_beaches() -> None:
+def search_beaches(a: int) -> int:
     """Executes action that locates Emerald Crown."""
-    global points
     global choice
-    print(f"{player}, you have chosen to search the beaches, and you now have {points} adventure points.")
+    a = a + 1000
+    print(f"{player}, you have chosen to search the beaches, and you now have {a} adventure points.")
     print(f"Congratulations, {player}! You found the Emerald Crown buried in the sand!")
+    print("Would you like to... \n4: keep the Emerald Crown \n5: donate it to a museum")
+    crown_choice: int = int(input("Enter the number of your action: "))
+
+    if crown_choice == 4:
+        a = a + 100
+    if crown_choice == 5:
+        a = a + 500
+    
     choice = 1
-    points = treasure_points(points)
+    return a
 
 
 def search_jungle() -> None:
@@ -94,12 +104,6 @@ def search_jungle() -> None:
 def add_points(a: int) -> int:
     """Adds adventure points."""
     a = 10 + a
-    return a
-
-
-def treasure_points(a: int) -> int: 
-    """Adds lots of adventure points."""
-    a = 1000 + a
     return a
 
 
