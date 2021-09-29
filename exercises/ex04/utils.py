@@ -7,18 +7,23 @@ __author__ = "730224009"
 
 
 def all(x: list[int], z: int) -> bool:
+    """Determines if all ints in a list are the same as a given int."""
     counter: int = 0
-    while counter < len(x):
-        item: int = x[counter]
-        if item != z:
-            return False
-        else:
-            counter += 1
+    if counter == len(x):
+        return False
+    else:
+        while counter < len(x):
+            item: int = x[counter]
+            if item != z:
+                return False
+            else:
+                counter += 1
 
-    return True
+        return True
 
 
 def is_equal(a: list[int], b: list[int]) -> bool:
+    """Determines if two given lists are deeply equal."""
     counter_a: int = 0
     counter_b: int = 0
     if len(a) == len(b):
@@ -36,6 +41,7 @@ def is_equal(a: list[int], b: list[int]) -> bool:
 
 
 def max(z: list[int]) -> int:
+    """Finds the maximum value in a given list."""
     if len(z) == 0:
         raise ValueError("max() arg is an empty List")
         
