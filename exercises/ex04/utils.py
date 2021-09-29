@@ -33,3 +33,23 @@ def is_equal(a: list[int], b: list[int]) -> bool:
         return True
     else:
         return False
+
+
+def max(z: list[int]) -> int:
+    if len(z) == 0:
+        raise ValueError("max() arg is an empty List")
+        
+    else:
+        i: int = 0
+        current_max: int = z[0]
+        counter: int = 0
+        while i < len(z):
+            current_comparison: int = z[counter]
+            if current_max > current_comparison:
+                counter += 1
+                i += 1
+            else:
+                current_max = current_comparison
+                counter += 1
+                i += 1
+        return current_max
