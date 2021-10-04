@@ -39,3 +39,16 @@ def sub(c: list[int], start_index: int, end_index: int) -> list[int]:
 
     return new_list
 
+
+def concat(uno: list[int], dos: list[int]) -> list[int]:
+    nueva: list[int] = list()
+    counter_uno: int = 0
+    counter_dos: int = 0
+    while counter_uno < len(uno):
+        nueva.append(uno[counter_uno])
+        counter_uno += 1
+    while counter_dos < len(dos):
+        nueva.append(dos[counter_dos])
+        counter_dos += 1
+    return nueva
+
