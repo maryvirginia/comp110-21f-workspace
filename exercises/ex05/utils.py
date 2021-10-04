@@ -17,3 +17,25 @@ def only_evens(a: list[int]) -> list[int]:
     return b
 
 
+def sub(c: list[int], start_index: int, end_index: int) -> list[int]:
+    new_list: list[int] = list()
+    counter: int = 0
+    # finder: int = start_index
+    while counter < len(c) and start_index < len(c) and end_index > 0:
+        if start_index >= 0:
+            finder: int = start_index
+        else:
+            finder: int = 0
+        
+        if end_index <= len(c):
+            stopper: int = end_index
+        else:
+            stopper: int = len(c)
+
+        while finder < stopper:
+            new_list.append(c[finder])
+            finder += 1
+        counter = len(c)
+
+    return new_list
+
