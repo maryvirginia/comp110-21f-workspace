@@ -10,6 +10,7 @@ def only_evens(a: list[int]) -> list[int]:
     index: int = len(a) - 1
     item: int = a[index]
     while counter < len(a):
+        print("hi")
         if item % 2 != 0 or abs(item) == 1:
             a.pop()
             index -= 1
