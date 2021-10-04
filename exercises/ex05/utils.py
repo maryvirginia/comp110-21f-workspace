@@ -6,6 +6,7 @@ __author__ = "730224009"
 
 
 def only_evens(a: list[int]) -> list[int]:
+    """Creates a list of only even ints from given list."""
     counter: int = 0
     b: list[int] = list()
     while counter < len(a):
@@ -18,6 +19,7 @@ def only_evens(a: list[int]) -> list[int]:
 
 
 def sub(c: list[int], start_index: int, end_index: int) -> list[int]:
+    """Returns list of ints within given parameters."""
     new_list: list[int] = list()
     counter: int = 0
     # finder: int = start_index
@@ -41,6 +43,7 @@ def sub(c: list[int], start_index: int, end_index: int) -> list[int]:
 
 
 def concat(uno: list[int], dos: list[int]) -> list[int]:
+    """Returns new list of list one followed by list two."""
     nueva: list[int] = list()
     counter_uno: int = 0
     counter_dos: int = 0
@@ -51,4 +54,3 @@ def concat(uno: list[int], dos: list[int]) -> list[int]:
         nueva.append(dos[counter_dos])
         counter_dos += 1
     return nueva
-
