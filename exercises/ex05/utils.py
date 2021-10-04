@@ -6,19 +6,14 @@ __author__ = "730224009"
 
 
 def only_evens(a: list[int]) -> list[int]:
-    counter = 0
-    index: int = len(a) - 1
-    item: int = a[index]
+    counter: int = 0
+    b: list[int] = list()
     while counter < len(a):
-        print("hi")
-        if item % 2 != 0 or abs(item) == 1:
-            a.pop()
-            index -= 1
+        if a[counter] % 2 == 0 and a[counter] != 0:
+            b.append(a[counter])
             counter += 1
         else:
-            index -= 1
             counter += 1
-    return a
-
+    return b
 
 
