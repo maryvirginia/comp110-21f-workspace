@@ -14,7 +14,9 @@ def invert(a: dict[str, str]) -> dict[str, str]:
             raise KeyError("KeyError: new key already exists.")
         else:
             # proceed with adding key and value to new_dict
-            key = a[key] 
-            new_dict[key] = key
+            new_value: str = a[key]
+            new_dict[new_value] = key
 
     return new_dict
+
+
