@@ -40,3 +40,12 @@ def favorite_color(b: dict[str, str]) -> str:
             return key 
 
 
+def count(c: list[str]) -> dict[str, int]:
+    new_dict: dict[str, int] = {}
+    for item in c:
+        if item in new_dict:
+            new_dict[item] += 1
+        else:
+            new_dict[item] = 1
+    
+    return new_dict 
