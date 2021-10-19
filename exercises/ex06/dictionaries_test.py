@@ -49,4 +49,3 @@ def test_count_same_keys() -> None:
 def test_count_empty() -> None:
     """Ensures count returns empty dict when given empty list."""
     assert count([]) == {}
-

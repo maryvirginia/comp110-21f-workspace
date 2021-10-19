@@ -25,9 +25,8 @@ def favorite_color(b: dict[str, str]) -> str:
     """Returns most popular favorite color from a given dict."""
     tracker_dict: dict[str, int] = {}
     for key in b:
-        does_color_exist: bool = b[key] in tracker_dict
         tracker_key: str = b[key]
-        if does_color_exist == True:
+        if b[key] in tracker_dict:
             tracker_dict[tracker_key] += 1
         else:
             tracker_dict[tracker_key] = 0
