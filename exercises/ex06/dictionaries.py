@@ -20,3 +20,23 @@ def invert(a: dict[str, str]) -> dict[str, str]:
     return new_dict
 
 
+def favorite_color(b: dict[str, str]) -> str:
+    tracker_dict: dict[str, int] = {}
+    for key in b:
+        does_color_exist: bool = b[key] in tracker_dict
+        tracker_key: str = b[key]
+        if does_color_exist == True:
+            tracker_dict[tracker_key] += 1
+        else:
+            tracker_dict[tracker_key] = 0
+
+    current_max: int = 0
+    for key in tracker_dict:
+        if tracker_dict[key] > current_max:
+            current_max = tracker_dict[key]
+
+    for key in tracker_dict:
+        if current_max == tracker_dict[key]:
+            return key 
+
+
