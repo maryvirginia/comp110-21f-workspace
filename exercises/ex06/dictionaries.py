@@ -9,8 +9,7 @@ def invert(a: dict[str, str]) -> dict[str, str]:
     """Swaps keys and values."""
     new_dict: dict[str, str] = {}
     for key in a:
-        does_new_key_exist: bool = a[key] in new_dict
-        if does_new_key_exist == True:
+        if a[key] in new_dict:
             # raise key error
             raise KeyError("KeyError: new key already exists.")
         else:
