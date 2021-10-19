@@ -6,6 +6,7 @@ __author__ = "730224009"
 
 
 def invert(a: dict[str, str]) -> dict[str, str]:
+    """Swaps keys and values."""
     new_dict: dict[str, str] = {}
     for key in a:
         does_new_key_exist: bool = a[key] in new_dict
@@ -21,6 +22,7 @@ def invert(a: dict[str, str]) -> dict[str, str]:
 
 
 def favorite_color(b: dict[str, str]) -> str:
+    """Returns most popular favorite color from a given dict."""
     tracker_dict: dict[str, int] = {}
     for key in b:
         does_color_exist: bool = b[key] in tracker_dict
@@ -41,6 +43,7 @@ def favorite_color(b: dict[str, str]) -> str:
 
 
 def count(c: list[str]) -> dict[str, int]:
+    """Returns dict with frequencies of items in a list."""
     new_dict: dict[str, int] = {}
     for item in c:
         if item in new_dict:
